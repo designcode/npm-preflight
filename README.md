@@ -11,12 +11,10 @@ Every `npm install` you run is an implicit decision to execute arbitrary code fr
 ## Install
 
 ```sh
-git clone <this-repo> npm-preflight
-cd npm-preflight
-npm link
+npm install -g npm-preflight
 ```
 
-`npm link` puts `npm-preflight` on your `PATH`. No dependencies to install — it's a single Node script.
+That puts `npm-preflight` on your `PATH`. No runtime dependencies — it's a single Node script.
 
 ## Usage
 
