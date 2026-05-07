@@ -1,4 +1,4 @@
-# npm-vet
+# npm-preflight
 
 A thin wrapper around `npm install` that detects `preinstall`, `install`, and `postinstall` lifecycle scripts in newly installed packages, prints them to you, and asks for confirmation before letting them run.
 
@@ -6,34 +6,34 @@ A thin wrapper around `npm install` that detects `preinstall`, `install`, and `p
 
 ## Why
 
-Every `npm install` you run is an implicit decision to execute arbitrary code from every package in the resolved dependency tree. Most of the time that code is benign (`node-gyp`, `esbuild`, `sharp`), but `postinstall` is also the most common foothold for malicious npm packages. `npm-vet` makes that decision explicit.
+Every `npm install` you run is an implicit decision to execute arbitrary code from every package in the resolved dependency tree. Most of the time that code is benign (`node-gyp`, `esbuild`, `sharp`), but `postinstall` is also the most common foothold for malicious npm packages. `npm-preflight` makes that decision explicit.
 
 ## Install
 
 ```sh
-git clone <this-repo> npm-vet
-cd npm-vet
+git clone <this-repo> npm-preflight
+cd npm-preflight
 npm link
 ```
 
-`npm link` puts `npm-vet` on your `PATH`. No dependencies to install — it's a single Node script.
+`npm link` puts `npm-preflight` on your `PATH`. No dependencies to install — it's a single Node script.
 
 ## Usage
 
 Use it exactly like `npm`:
 
 ```sh
-npm-vet install <package>           # add a local dep
-npm-vet install -g <package>        # global install
-npm-vet install                     # install from package.json
-npm-vet add <package>               # alias also works
+npm-preflight install <package>           # add a local dep
+npm-preflight install -g <package>        # global install
+npm-preflight install                     # install from package.json
+npm-preflight add <package>               # alias also works
 ```
 
 Anything that isn't an install command is forwarded to `npm` unchanged:
 
 ```sh
-npm-vet view some-pkg               # → npm view some-pkg
-npm-vet --version                   # → npm --version
+npm-preflight view some-pkg               # → npm view some-pkg
+npm-preflight --version                   # → npm --version
 ```
 
 ### What you'll see

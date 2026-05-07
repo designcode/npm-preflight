@@ -201,7 +201,7 @@ async function main() {
   try {
     nmPath = getInstallLocation(parsed.global);
   } catch (err) {
-    console.error(red(`npm-vet: ${err.message}`));
+    console.error(red(`npm-preflight: ${err.message}`));
     process.exit(1);
   }
 
@@ -255,6 +255,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  console.error(red(`npm-vet error: ${err.message}`));
+  console.error(red(`npm-preflight error: ${err.message}`));
   process.exit(1);
 });

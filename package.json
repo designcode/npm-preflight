@@ -1,21 +1,21 @@
 {
-  "name": "npm-vet",
+  "name": "npm-preflight",
   "version": "0.0.0",
   "author": "designcode",
-  "homepage": "https://github.com/designcode/npm-vet",
+  "homepage": "https://github.com/designcode/npm-preflight",
   "repository": {
     "type": "git",
-    "url": "https://github.com/designcode/npm-vet.git"
+    "url": "https://github.com/designcode/npm-preflight.git"
   },
   "bugs": {
-    "url": "https://github.com/designcode/npm-vet/issues"
+    "url": "https://github.com/designcode/npm-preflight/issues"
   },
   "publishConfig": {
     "access": "public"
   },
   "description": "Wrapper around npm install that warns about lifecycle scripts before running them.",
   "bin": {
-    "npm-vet": "bin/npm-vet.js"
+    "npm-preflight": "bin/npm-preflight.js"
   },
   "engines": {
     "node": ">=18"
