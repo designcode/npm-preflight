@@ -1,0 +1,28 @@
+{
+  "name": "npm-vet",
+  "version": "0.0.0",
+  "author": "designcode",
+  "homepage": "https://github.com/designcode/npm-vet",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designcode/npm-vet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/designcode/npm-vet/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Wrapper around npm install that warns about lifecycle scripts before running them.",
+  "bin": {
+    "npm-vet": "bin/npm-vet.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "files": [
+    "bin",
+    "README.md"
+  ]
+}
